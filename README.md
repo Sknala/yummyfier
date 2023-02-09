@@ -1,6 +1,6 @@
 # Sknala Yummyfier 2023
 
-Team Sknala: Christel Baker, Jenni Erkkilä, Iiris Harju, Verneri Heikkilä, Niklas Hietala
+ ###### Team Sknala: Christel Baker, Jenni Erkkilä, Iiris Harju, Verneri Heikkilä, Niklas Hietala
 
 Business Information Technology degree programme at Haaga-Helia University of Applied Sciences
 
