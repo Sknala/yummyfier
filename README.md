@@ -1,6 +1,6 @@
 # Sknala Yummyfier 2023
 
- ###### Team Sknala: Christel Baker, Jenni Erkkilä, Iiris Harju, Verneri Heikkilä, Niklas Hietala
+ ###### Team Sknala: Christel Baker, Jenni Erkkilä, Iiris Harju, Verneri Heikkilä and Niklas Hietala
 
 Business Information Technology degree programme at Haaga-Helia University of Applied Sciences
 
@@ -12,11 +12,12 @@ Business Information Technology degree programme at Haaga-Helia University of Ap
 ## Yummyfier
 
 - Food recipe web application for users interested in cooking
+- App has various options and categories from vegetarian to meat
 - App aims to reduce food waste, save time and inspire
 
-Simple idea:
+Idea in short:
 - You have ingredients in your fridge but you don't know what you can make of them
-- Write your ingredient(s) to the app and it suggests recipe ideas that can be made
+- Write your ingredient(s) to the app and it suggests recipe ideas that can be made of them
 - If you come to like some recipe you can save it
 
 <sub>**However, if you only have few basic ingredients (eggs, flours...) we can't ensure you can make something only with those**</sub>
