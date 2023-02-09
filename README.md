@@ -22,8 +22,8 @@ Simple idea:
 <sub>**However, if you only have few basic ingredients (eggs, flours...) we can't ensure you can make something only with those**</sub>
 
 ## User Stories
-**1.** As an uninspired cook, I want to get ideas of what I can do with the random items in my fridge, so that I don't need to go to the store.
-**2.** As a User I want to be able to list ingredients I have to get recipes
-**3.** As a User I want to be able to save the recipes I really liked, so that I can use them again
-**4.** As a developer I want to have free and broad data which I can just fetch easily with no limits
+- As an uninspired cook, I want to get ideas of what I can do with the random items in my fridge, so that I don't need to go to the store.
+- As a User I want to be able to list ingredients I have to get recipes
+- As a User I want to be able to save the recipes I really liked, so that I can use them again
+- As a developer I want to have free and broad data which I can just fetch easily with no limits
 
