@@ -30,7 +30,7 @@ Idea in short:
 - Write your ingredient(s) to the app and it suggests recipe ideas that can be made of them
 - Create an account, so that if you come to like any of the recipes you can save them to your profile and access them from all of your devices
 
-<sub>**However, if you only have few basic ingredients (eggs, flours...) we can't ensure you can make something only with those**</sub>
+<sub>**However, if you only have few basic ingredients (eggs, flours...) we can't ensure you can make something with those only**</sub>
 
 ## User Stories
 - As an uninspired cook, I want to get ideas of what I can do with the random items in my fridge, so that I don't need to go to the store.
