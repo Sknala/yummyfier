@@ -28,7 +28,7 @@ Business Information Technology degree programme at Haaga-Helia University of Ap
 Idea in short:
 - You have ingredients in your fridge but you don't know what you can make of them
 - Write your ingredient(s) to the app and it suggests recipe ideas that can be made of them
-- If you come to like some recipe you can save it
+- Create an account, so that if you come to like any of the recipes you can save them to your profile and access them from all of your devices
 
 <sub>**However, if you only have few basic ingredients (eggs, flours...) we can't ensure you can make something only with those**</sub>
 
