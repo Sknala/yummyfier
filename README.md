@@ -14,7 +14,7 @@ Business Information Technology degree programme at Haaga-Helia University of Ap
 - Web application created with React App
 - Mockup created with Figma
 - As database using Firebase Realtime Database
-- We are using TheMealDB API to fetch recipes and ingridients
+- We are using TheMealDB API to fetch recipes and ingredients
 
 <sub>**Further development aims to expand the app to be mobile responsive**</sub>
 
