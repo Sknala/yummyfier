@@ -1,10 +1,9 @@
-import './App.css';
-import Test from './components';
+import Index from './components';
 
 function App() {
   return (
     <div className="App">
-      <Test />
+      <Index />
     </div>
   );
 }
