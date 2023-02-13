@@ -9,11 +9,20 @@ Business Information Technology degree programme at Haaga-Helia University of Ap
 - Assignment for Ohjelmistoprojekti II (Software Project II)
 - Purpose of our project is to design a web application using open data
 
+## Development Tools
+
+- Web application created with React App
+- Mockup created with Figma
+- As database using Firebase Realtime Database
+
+<sub>**Further development aims to expand the app to be mobile responsive**</sub>
+
 ## Yummyfier
 
 - Food recipe web application for users interested in cooking
 - App has various options and categories from vegetarian to meat
 - App aims to reduce food waste, save time and inspire
+- We are using TheMealDB API to fetch recipes and ingridients
 
 Idea in short:
 - You have ingredients in your fridge but you don't know what you can make of them
