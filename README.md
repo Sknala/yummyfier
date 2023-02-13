@@ -38,3 +38,8 @@ Idea in short:
 - As a User I want to be able to save the recipes I really liked, so that I can use them again
 - As a developer I want to have free and broad data which I can just fetch easily with no limits
 
+## First mockups
+
+<img src="https://user-images.githubusercontent.com/105623785/218464636-2f14ce20-3a54-458e-9666-d59d74fb99ef.png" width="500" height="400" />
+
+
