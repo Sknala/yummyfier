@@ -49,6 +49,9 @@ Idea in short:
 
 ## First mockups
 
-<img src="https://user-images.githubusercontent.com/105623785/218464636-2f14ce20-3a54-458e-9666-d59d74fb99ef.png" width="500" height="400" />
+<img src="https://user-images.githubusercontent.com/105623785/219050726-1a414277-e6e9-43eb-b0cb-406fefbbfa0e.png" width="450" height="300" />   <img src="https://user-images.githubusercontent.com/105623785/219051891-2c2bd5bf-1871-4147-abca-920b67fa2922.png" width="450" height="300" />
+
+
+
 
 
