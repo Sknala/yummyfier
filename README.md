@@ -33,10 +33,19 @@ Idea in short:
 <sub>**However, if you only have few basic ingredients (eggs, flours...) we can't ensure you can make something with those only**</sub>
 
 ## User Stories
+
 - As an uninspired cook, I want to get ideas of what I can do with the random items in my fridge, so that I don't need to go to the store.
 - As a User I want to be able to list ingredients I have to get recipes
 - As a User I want to be able to save the recipes I really liked, so that I can use them again
 - As a developer I want to have free and broad data which I can just fetch easily with no limits
+
+## Target Audience
+
+- The target audience for Yummyfier are individuals who are interested in cooking and are seeking inspiration for their meals
+- This includes people who may not have a lot of experience in the kitchen and are looking for new recipe ideas, as well as experienced cooks who want to try out new dishes
+- Yummyfier appeals to those who want to reduce food waste and save time by utilizing ingredients they already have on hand, rather than making an unnecessary trip to the store
+- By allowing users to save recipes they enjoy, the app encourages repeat use
+- Overall, Yummyfier is designed to meet the needs of a broad range of users who are interested in cooking, with a focus on simplicity, convenience, and accessibility.
 
 ## First mockups
 
