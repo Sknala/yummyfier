@@ -4,6 +4,17 @@
 
 Business Information Technology degree programme at Haaga-Helia University of Applied Sciences
 
+## Table of contents
+1. [Getting Started with Create React App](#getting-started-with-create-react-app)
+    - [Available Scripts](#available-scripts)
+    - [Learn More](#learn-more)
+3. [Project Plan](#project-plan)
+4. [Development Tools](#development-tools)
+5. [Yummyfier](#yummyfier)
+6. [User Stories](#user-stories)
+7. [Target Audience](#target-audience)
+8. [First mockups](#first-mockups)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). YumYumYum.
