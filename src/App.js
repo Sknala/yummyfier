@@ -1,9 +1,9 @@
-import Index from './components';
+import Header from './components/header';
 
 function App() {
   return (
     <div className="App">
-      <Index />
+      <Header />
     </div>
   );
 }

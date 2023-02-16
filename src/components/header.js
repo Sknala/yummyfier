@@ -1,8 +1,8 @@
 // Test components folder and file
 import React, { useState } from 'react';
-import './index.css';
+import './header.css';
 
-export default function Index() {
+export default function Header() {
     return (
         <div className="container">
             <div className="header">
