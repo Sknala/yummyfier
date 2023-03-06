@@ -1,0 +1,26 @@
+/* https://www.w3schools.com/css/css3_variables.asp */
+:root {
+    --eggplant: #614051;
+    --eggplantLight: #E3CCD8;
+    --salmon: #E5989B;
+    --salmonLight: #F9DEDF;
+    --melon: #FFB4A2;
+    --melonLight: #FEE2DB;
+    --spearmint: #9BB4A8;
+    --spearmintLight: #D1E5DC;
+    font-family: 'Inter', sans-serif;
+}
+
+
+.footer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: auto;
+    width: 100vw;
+    padding: 20px;
+    padding-left: 130px;
+    background-color: var(--eggplant);
+    color: var(--melonLight);
+}
