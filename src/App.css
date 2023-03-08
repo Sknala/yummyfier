@@ -24,3 +24,37 @@
     background-color: var(--eggplant);
     color: var(--melonLight);
 }
+
+.searchbar{
+width: 597px;
+height: 64px;
+box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+padding-right: 4%;
+
+}
+
+.searchdiv{
+    position: relative;
+    top: 70px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+  .searchbar input::placeholder {
+    color: var(--eggplant);
+    text-align: center;
+    font-weight: bold;
+    opacity: 1;
+  }
+
+.searchicon{
+    cursor: pointer;
+    padding-left: 30px;
+    font-size: 40px;
+}
+
+
+
+
+
