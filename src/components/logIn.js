@@ -7,6 +7,8 @@ import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 
+import '../App.css'
+
 export default function LogIn() {
     const [open, setOpen] = React.useState(false);
 
@@ -20,7 +22,7 @@ export default function LogIn() {
 
     return (
         <div>
-            <Button variant="text" style={{ color: '#614051', fontSize: '15px', fontWeight: 'bold', float: 'right', marginRight: '100px' }} onClick={handleClickOpen}>
+            <Button id='logIn' variant="text" onClick={handleClickOpen}>
                 Log In
             </Button>
             <Dialog open={open} onClose={handleClose}>

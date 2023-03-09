@@ -7,7 +7,7 @@ import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 
-import LogIn from './logIn';
+import '../App.css'
 
 export default function CreateUser() {
     const [open, setOpen] = React.useState(false);
@@ -22,7 +22,7 @@ export default function CreateUser() {
 
     return (
         <div>
-            <Button variant="text" style={{ color: '#614051', fontSize: '15px', fontWeight: 'bold', float: 'right', marginRight: '100px' }} onClick={handleClickOpen}>
+            <Button variant="text" id='createUser' onClick={handleClickOpen}>
                 Create User
             </Button>
             <Dialog open={open} onClose={handleClose}>

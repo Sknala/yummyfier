@@ -1,4 +1,4 @@
-/* Hiton isot näytöt */
+/* Big screens */
 @media (min-width: 1551px) {
     .header {
         font-family: 'Inter', Arial, Helvetica, sans-serif;
@@ -15,7 +15,7 @@
 }
 
 /* Laptops */
-@media (min-width: 769px) and (max-width: 1550px) {
+@media (min-width: 1025px) and (max-width: 1550px) {
     .header {
         font-family: 'Inter', sans-serif;
         color: var(--eggplant);
@@ -31,15 +31,15 @@
 }
 
 /* iPads, Tablets */
-@media (min-width: 481px) and (max-width: 768px) {
+@media (min-width: 481px) and (max-width: 1024px) {
     .header {
         font-family: 'Inter', sans-serif;
         color: var(--eggplant);
-        font-size: 50px;
+        font-size: 55px;
         font-weight: bold;
         text-align: left;
 
-        margin-top: 80px;
+        margin-top: 60px;
         margin-left: 100px;
         width: 130px;
         border-bottom: 8px solid #D1E5DC;
@@ -51,13 +51,13 @@
     .header {
         font-family: 'Inter', Arial, Helvetica, sans-serif;
         color: var(--eggplant);
-        font-size: 20px;
+        font-size: 30px;
         font-weight: bold;
         text-align: left;
 
-        margin-top: 80px;
-        margin-left: 50px;
-        width: 60px;
+        margin-top: 30px;
+        margin-left: 30px;
+        width: 80px;
         border-bottom: 5px solid #D1E5DC;
     }
 }
