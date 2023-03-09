@@ -1,4 +1,3 @@
-import { textAlign } from "@mui/system";
 import '../App.css'
 
 export default function Slogan() {

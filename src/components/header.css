@@ -1,12 +1,63 @@
-.header {
-    font-family: 'Inter', Arial, Helvetica, sans-serif;
-    color: #614051;
-    font-size: 80px;
-    font-weight: bold;
-    text-align: left;
+/* Hiton isot näytöt */
+@media (min-width: 1551px) {
+    .header {
+        font-family: 'Inter', Arial, Helvetica, sans-serif;
+        color: var(--spearmint);
+        font-size: 80px;
+        font-weight: bold;
+        text-align: left;
 
-    margin-top: 80px;
-    margin-left: 150px;
-    width: 220px;
-    border-bottom: 8px solid #D1E5DC;
+        margin-top: 80px;
+        margin-left: 150px;
+        width: 220px;
+        border-bottom: 8px solid #D1E5DC;
+    }
+}
+
+/* Laptops */
+@media (min-width: 769px) and (max-width: 1550px) {
+    .header {
+        font-family: 'Inter', sans-serif;
+        color: var(--eggplant);
+        font-size: 80px;
+        font-weight: bold;
+        text-align: left;
+
+        margin-top: 80px;
+        margin-left: 150px;
+        width: 220px;
+        border-bottom: 8px solid #D1E5DC;
+    }
+}
+
+/* iPads, Tablets */
+@media (min-width: 481px) and (max-width: 768px) {
+    .header {
+        font-family: 'Inter', sans-serif;
+        color: var(--eggplant);
+        font-size: 50px;
+        font-weight: bold;
+        text-align: left;
+
+        margin-top: 80px;
+        margin-left: 100px;
+        width: 130px;
+        border-bottom: 8px solid #D1E5DC;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .header {
+        font-family: 'Inter', Arial, Helvetica, sans-serif;
+        color: var(--eggplant);
+        font-size: 20px;
+        font-weight: bold;
+        text-align: left;
+
+        margin-top: 80px;
+        margin-left: 50px;
+        width: 60px;
+        border-bottom: 5px solid #D1E5DC;
+    }
 }
