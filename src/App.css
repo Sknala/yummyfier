@@ -34,13 +34,14 @@
 /* Laptops */
 @media (min-width: 1025px) and (max-width: 1550px) {
 
-    /* Slogans */
-    #sOne {
-        color: var(--spearmint);
-    }
-
-    #sTwo {
+    /* LogIn and Create User buttons */
+    #logIn,
+    #createUser {
         color: var(--eggplant);
+        font-size: 15px;
+        font-weight: bold;
+        float: right;
+        margin-right: 60px;
     }
 }
 
@@ -59,25 +60,4 @@
 }
 
 /* Mobile */
-@media (max-width: 480px) {
-
-    /* LogIn and Create User buttons */
-    #logIn,
-    #createUser {
-        color: var(--eggplant);
-        font-size: 13px;
-        font-weight: bold;
-        float: right;
-    }
-
-    /* Slogans */
-    #sOne {
-        color: var(--spearmint);
-        margin-top: 50px;
-        margin-bottom: 50px;
-    }
-
-    #sTwo {
-        color: var(--eggplant);
-    }
-}
+@media (max-width: 480px) {}
