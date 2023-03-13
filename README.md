@@ -130,4 +130,4 @@ Idea in short:
 
 ## First mockups
 
-<img src="https://user-images.githubusercontent.com/105623785/219050726-1a414277-e6e9-43eb-b0cb-406fefbbfa0e.png" width="450" height="300" />   <img src="https://user-images.githubusercontent.com/105623785/219051891-2c2bd5bf-1871-4147-abca-920b67fa2922.png" width="450" height="300" />
+<img src="https://user-images.githubusercontent.com/105623785/224726407-1e2e4840-d3fc-41f1-be10-d6575a42f233.png" width="450" height="300" />
