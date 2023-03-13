@@ -23,13 +23,17 @@ function RecipeFetch() {
         throw new Error(`HTTP error: status is ${response.status}`);
       }
       const data = await response.json();
-      console.log(data.hits);
       setRecipes(data.hits);
     } catch (err) {
       setError(err.message);
     } finally {
       setLoading(false);
     }
+  };
+
+  const searchRecipes = () => {
+    getRecipes();
+    setSearch("");
   };
 
   return (
@@ -43,6 +47,9 @@ function RecipeFetch() {
           img={recipe.recipe.image}
           ingredients={recipe.recipe.ingredients}
           prepTime={recipe.recipe.totalTime}
+          calories={recipe.recipe.calories}
+          // servings={recipe.recipe.yield}
+          url={recipe.recipe.url}
         />
       ))}
     </>
