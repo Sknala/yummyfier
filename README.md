@@ -96,7 +96,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 - Web application created with React App
 - Mockup created with [Figma](https://www.figma.com/)
 - As database using [Firebase Realtime Database](https://firebase.google.com/)
-- We are using [TheMealDB API](https://www.themealdb.com/api.php) to fetch recipes and ingredients
+- We are using [Edamam API](https://www.edamam.com/) to fetch recipes and ingredients
 
 <sub>**Further development aims to expand the app to be mobile responsive**</sub>
 
