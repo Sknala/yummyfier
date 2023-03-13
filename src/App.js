@@ -1,13 +1,11 @@
-import EdamamRecipeFetch from "./components/EdamamFetch";
-// import Footer from "./components/Footer";
+import Footer from "./components/Footer";
 import Header from "./components/header";
 
 function App() {
   return (
     <div className="App">
       <Header />
-      <EdamamRecipeFetch />
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }

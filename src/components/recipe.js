@@ -1,6 +1,6 @@
 import React from "react";
 
-function EdamamRecipe(props) {
+function Recipe(props) {
   return (
     <>
       <h1>{props.title}</h1>
@@ -14,4 +14,4 @@ function EdamamRecipe(props) {
     </>
   );
 }
-export default EdamamRecipe;
+export default Recipe;
