@@ -1,12 +1,13 @@
 import Footer from './components/Footer';
 import Header from './components/header';
-import SearchBox from './components/searchBox';
+import RecipeFetch from './components/recipeFetch';
+
 
 function App() {
   return (
     <div className="App">
       <Header />
-      <SearchBox />
+      <RecipeFetch />
       <Footer />
     </div>
   );
