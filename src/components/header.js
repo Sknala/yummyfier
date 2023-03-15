@@ -4,7 +4,7 @@ import "./header.css";
 import "../App.css";
 import LogIn from "./logIn";
 import CreateUser from "./createUser";
-import SearchBox from "./searchBox";
+
 
 import "./header.css";
 import "../App.css";

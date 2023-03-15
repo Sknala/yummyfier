@@ -1,96 +1,96 @@
 /* https://www.w3schools.com/css/css3_variables.asp */
 :root {
-    --eggplant: #614051;
-    --eggplantLight: #E3CCD8;
-    --salmon: #E5989B;
-    --salmonLight: #F9DEDF;
-    --melon: #FFB4A2;
-    --melonLight: #FEE2DB;
-    --spearmint: #9BB4A8;
-    --spearmintLight: #D1E5DC;
-    font-family: 'Inter', sans-serif;
+  --eggplant: #614051;
+  --eggplantLight: #e3ccd8;
+  --salmon: #e5989b;
+  --salmonLight: #f9dedf;
+  --melon: #ffb4a2;
+  --melonLight: #fee2db;
+  --spearmint: #9bb4a8;
+  --spearmintLight: #d1e5dc;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  min-height: 100%;
 }
 
 .footer {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: auto;
-    width: auto;
-    padding: 15px;
-    padding-left: 130px;
-    background-color: var(--eggplant);
-    color: var(--melonLight);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: auto;
+  width: auto;
+  padding: 15px;
+  padding-left: 130px;
+  background-color: var(--eggplant);
+  color: var(--melonLight);
 }
 
 .slogans {
-    text-align: center;
+  text-align: center;
 }
 
 /* Big screens */
-@media (min-width: 1551px) {}
+@media (min-width: 1551px) {
+}
 
 /* Laptops */
 @media (min-width: 1025px) and (max-width: 1550px) {
-
-    /* LogIn and Create User buttons */
-    #logIn,
-    #createUser {
-        color: var(--eggplant);
-        font-size: 15px;
-        font-weight: bold;
-        float: right;
-        margin-right: 60px;
-    }
+  /* LogIn and Create User buttons */
+  #logIn,
+  #createUser {
+    color: var(--eggplant);
+    font-size: 15px;
+    font-weight: bold;
+    float: right;
+    margin-right: 60px;
+  }
 }
 
 /* iPads, Tablets */
 @media (min-width: 481px) and (max-width: 1024px) {
-
-    /* LogIn and Create User buttons */
-    #logIn,
-    #createUser {
-        color: var(--eggplant);
-        font-size: 15px;
-        font-weight: bold;
-        float: right;
-        margin-right: 60px;
-    }
+  /* LogIn and Create User buttons */
+  #logIn,
+  #createUser {
+    color: var(--eggplant);
+    font-size: 15px;
+    font-weight: bold;
+    float: right;
+    margin-right: 60px;
+  }
 }
 
 /* Mobile */
-@media (max-width: 480px) {}
-.searchbar{
-width: 597px;
-height: 64px;
-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
-padding-right: 4%;
-
+@media (max-width: 480px) {
 }
 
-.searchdiv{
-    position: relative;
-    top: 70px;
-display: flex;
-justify-content: center;
-align-items: center;
+.searchbar {
+  width: 597px;
+  height: 64px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+  padding-right: 4%;
 }
 
-  .searchbar input::placeholder {
-    color: var(--eggplant);
-    text-align: center;
-    font-weight: bold;
-    opacity: 1;
-  }
-
-.searchicon{
-    cursor: pointer;
-    padding-left: 30px;
-    font-size: 40px;
+.searchdiv {
+  position: relative;
+  margin-bottom: 120px;
+  top: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+.searchbar input::placeholder {
+  color: var(--eggplant);
+  text-align: center;
+  font-weight: bold;
+  opacity: 1;
+}
 
-
-
-
+.searchicon {
+  cursor: pointer;
+  padding-left: 30px;
+  font-size: 40px;
+}

@@ -1,5 +1,9 @@
 import React, { useEffect, useState } from "react";
+import { InputAdornment, Input } from "@mui/material";
+import SearchIcon from "@mui/icons-material/Search";
 import Recipe from "./recipe";
+import "../App.css";
+import "./recipe.css";
 
 const APP_ID = process.env.REACT_APP_API_ID;
 const APP_KEY = process.env.REACT_APP_API_KEY;
@@ -13,6 +17,21 @@ function RecipeFetch() {
   useEffect(() => {
     getRecipes();
   }, []);
+
+  const handleSearchChange = (event) => {
+    setSearch(event.target.value);
+  };
+
+  const handleSearchSubmit = (event) => {
+    event.preventDefault();
+    searchRecipes();
+  };
+
+  const placeholderText = loading
+    ? "Please wait, loading..."
+    : error
+    ? `Problem fetching the recipe data: ${error}`
+    : "Search for a recipe by ingredient";
 
   const getRecipes = async () => {
     try {
@@ -38,20 +57,30 @@ function RecipeFetch() {
 
   return (
     <>
-      {loading && <div>Please wait, loading...</div>}
-      {error && <div>{`Problem fetching the recipe data: ${error}`}</div>}
-      {recipes.map((recipe) => (
-        <Recipe
-          key={recipe.recipe.label}
-          title={recipe.recipe.label}
-          img={recipe.recipe.image}
-          ingredients={recipe.recipe.ingredients}
-          prepTime={recipe.recipe.totalTime}
-          calories={recipe.recipe.calories}
-          // servings={recipe.recipe.yield}
-          url={recipe.recipe.url}
-        />
-      ))}
+      <div className="searchdiv">
+        <form onSubmit={handleSearchSubmit}>
+          <Input
+            type="text"
+            placeholder={placeholderText}
+            className="searchbar"
+            value={search}
+            onChange={handleSearchChange}
+            startAdornment={
+              <InputAdornment position="start">
+                <SearchIcon
+                  className="searchicon"
+                  style={{ fontSize: "40px" }}
+                />
+              </InputAdornment>
+            }
+          />
+        </form>
+      </div>
+      <div className="recipeList">
+        {recipes.map((recipe) => (
+          <Recipe key={recipe.recipe.label} data={recipe.recipe} />
+        ))}
+      </div>
     </>
   );
 }
