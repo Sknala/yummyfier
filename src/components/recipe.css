@@ -9,7 +9,6 @@
 
 /* View for desktops */
 @media (min-width: 1025px) {
-
   /* css for listing recipes
     
     /* from w3schools/css grid elements */
@@ -26,6 +25,7 @@
   width: 500px;
   height: auto;
   margin: 10px;
+  margin-bottom: 60px;
   box-shadow: 0px 5px 5px #614051;
 }
 
