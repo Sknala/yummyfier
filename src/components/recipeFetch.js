@@ -72,14 +72,7 @@ function RecipeFetch() {
     </div>
       {recipes.map((recipe) => (
         <Recipe
-          key={recipe.recipe.label}
-          title={recipe.recipe.label}
-          img={recipe.recipe.image}
-          ingredients={recipe.recipe.ingredients}
-          prepTime={recipe.recipe.totalTime}
-          calories={recipe.recipe.calories}
-          // servings={recipe.recipe.yield}
-          url={recipe.recipe.url}
+          data={recipe.recipe}
         />
       ))}
     </>
