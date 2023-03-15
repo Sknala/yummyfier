@@ -1,0 +1,87 @@
+/* View for laptops */
+@media (min-width: 481px) and (max-width: 1024px) {
+  .recipeList {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+  }
+}
+
+/* View for desktops */
+@media (min-width: 1025px) and (max-width: 1550px) {
+  /* css for listing recipes
+    
+    /* from w3schools/css grid elements */
+  .recipeList {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    place-items: center;
+  }
+}
+
+/* css for single recipe item */
+.recipeContainer {
+  border-radius: 2px;
+  width: 500px;
+  height: auto;
+  margin: 10px;
+  box-shadow: 0px 5px 5px #614051;
+}
+
+.recipeContainer h1,
+.recipeContainer p,
+.recipeContainer a {
+  margin-left: 10px;
+}
+
+.recipeContainer h1 {
+  font-size: 20px;
+}
+
+.recipeContainer ul,
+.recipeContainer p,
+.recipeContainer a {
+  font-size: 10px;
+}
+
+.recipeContainer a:link,
+.recipeContainer a:visited,
+.recipeContainer a:active {
+  text-decoration: none;
+  color: #614051;
+  cursor: pointer;
+}
+.recipeContainer a:hover {
+  color: #d1a0b9;
+}
+
+.recipeLabel {
+  float: right;
+  margin-right: 40px;
+  margin-top: 10px;
+}
+
+.recipeLabel {
+  display: flex;
+}
+
+.img {
+  height: 150px;
+  width: 150px;
+  margin-left: 20px;
+}
+
+.recipeImage {
+  float: left;
+}
+
+.ingredientList {
+  width: 200px;
+  float: right;
+  margin-right: 70px;
+}
+
+.recipeInfo {
+  padding-top: 150px;
+  padding-bottom: 10px;
+}
