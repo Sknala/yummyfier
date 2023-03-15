@@ -8,7 +8,8 @@
 }
 
 /* View for desktops */
-@media (min-width: 1025px) and (max-width: 1550px) {
+@media (min-width: 1025px) {
+
   /* css for listing recipes
     
     /* from w3schools/css grid elements */
@@ -51,6 +52,7 @@
   color: #614051;
   cursor: pointer;
 }
+
 .recipeContainer a:hover {
   color: #d1a0b9;
 }
