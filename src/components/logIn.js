@@ -7,7 +7,7 @@ import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 
-import '../App.css'
+import '../styles/App.css'
 
 export default function LogIn() {
     const [open, setOpen] = React.useState(false);

@@ -1,5 +1,5 @@
 import React from "react";
-import "./recipe.css";
+import "../styles/recipe.css";
 
 function Recipe(props) {
   const { label, image, ingredients, totalTime, calories, url } = props.data;

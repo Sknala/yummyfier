@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { InputAdornment, Input } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
-import Recipe from "./recipe";
-import "../App.css";
-import "./recipe.css";
+import Recipe from "../components/recipe.js";
+import "../styles/App.css";
+import "../styles/recipe.css";
 
 const APP_ID = process.env.REACT_APP_API_ID;
 const APP_KEY = process.env.REACT_APP_API_KEY;
@@ -30,8 +30,8 @@ function RecipeFetch() {
   const placeholderText = loading
     ? "Please wait, loading..."
     : error
-    ? `Problem fetching the recipe data: ${error}`
-    : "Search for a recipe by ingredient";
+      ? `Problem fetching the recipe data: ${error}`
+      : "Search for a recipe by ingredient";
 
   const getRecipes = async () => {
     try {

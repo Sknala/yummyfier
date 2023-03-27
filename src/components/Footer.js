@@ -1,4 +1,4 @@
-import '../App.css'
+import '../styles/App.css'
 export default function Footer() {
     return (
         <div className="container">
