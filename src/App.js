@@ -1,5 +1,6 @@
 import Footer from './components/Footer';
 import Header from './components/header';
+import RecipeCard from './components/recipeCard';
 import RecipeFetch from './components/recipeSearch';
 import Slogan from './components/slogan';
 

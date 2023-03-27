@@ -1,53 +1,50 @@
 import React from "react";
+import { Grid, Box, Paper, styled, CardActions, IconButton } from '@mui/material';
+import FavoriteIcon from '@mui/icons-material/Favorite';
 
 import { Card, CardContent, CardMedia, Typography, CardActionArea } from "@mui/material";
+import { fontSize } from "@mui/system";
 
-function Recipe(props) {
-    const { label, image, ingredients, totalTime, calories, url } = props.data;
+const Item = styled(Paper)(({ theme }) => ({
+}));
+
+function RecipeCard(props) {
+    const { label, image, ingredients, tags, totalTime, calories, url, source } = props.data;
     return (
         <>
-            <Card sx={{ maxWidth: 345 }}>
-                <CardActionArea>
-                    <CardMedia
-                        component="img"
-                        height="140"
-                        image="/static/images/cards/contemplative-reptile.jpg"
-                        alt="green iguana"
-                    />
-                    <CardContent>
-                        <Typography gutterBottom variant="h5" component="div">
-                            Lizard
-                        </Typography>
-                        <Typography variant="body2" color="text.secondary">
-                            Lizards are a widespread group of squamate reptiles, with over 6,000
-                            species, ranging across all continents except Antarctica
-                        </Typography>
-                    </CardContent>
-                </CardActionArea>
-            </Card>
-            <div className="recipeContainer">
-                <div className="recipeLabel">
-                    {totalTime === 0 ? <p></p> : <p>{totalTime} min</p>}
-                </div>
-                <h1>{label}</h1>
-                <div>
-                    <div className="recipeImage">
-                        <img className="img" src={image} alt="meal_picture" />
-                    </div>
-                    <div>
-                        <ul className="ingredientList">
-                            {ingredients.map((ingredient, index) => (
-                                <li key={index}>{ingredient.text}</li>
-                            ))}
-                        </ul>
-                    </div>
-                </div>
-                <div className="recipeInfo">
-                    <p>{Math.round(calories)} kcal</p>
-                    <a href={url}>Check out instructions</a>
-                </div>
-            </div>
+            <Box sx={{ flexGrow: 10 }}>
+                <Grid container spacing={{ xs: 1, md: 1 }} columns={{ xs: 4, sm: 8, md: 12 }}>
+                    <Grid item xs={1}>
+                        <Card sx={{ width: 300, marginBottom: 2 }}>
+                            <CardActionArea>
+                                <CardMedia
+                                    component="img"
+                                    height="140"
+                                    image={image}
+                                    alt="recipeImage"
+                                />
+                                <CardContent>
+                                    <Typography gutterBottom variant="p" component="div" style={{ fontSize: 18, fontWeight: 'bold' }}>
+                                        {label}
+                                    </Typography>
+                                    <Typography variant="body2" color="text.secondary">
+                                        {totalTime === 0 ? <p></p> : <p>{totalTime} min</p>}
+                                        <p>Calories: {Math.round(calories)}</p>
+
+                                    </Typography>
+                                </CardContent>
+                            </CardActionArea>
+                            <CardActions>
+                                <IconButton >
+                                    <FavoriteIcon />
+                                </IconButton>
+                                {totalTime === 0 ? <p></p> : <p style={{ marginLeft: 180 }}>{totalTime} min</p>}
+                            </CardActions>
+                        </Card>
+                    </Grid>
+                </Grid>
+            </Box>
         </>
     );
 }
-export default Recipe;
+export default RecipeCard;

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { InputAdornment, Input } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import Recipe from "./recipe.js";
+import RecipeCard from "./recipeCard.js";
 import "../styles/App.css";
 import "../styles/recipe.css";
 
@@ -52,8 +53,8 @@ function RecipeFetch() {
 
   const searchRecipes = () => {
     getRecipes();
-    setSearch("");
-  };
+/*     setSearch("");
+ */  };
 
   return (
     <>
@@ -78,7 +79,7 @@ function RecipeFetch() {
       </div>
       <div className="recipeList">
         {recipes.map((recipe) => (
-          <Recipe key={recipe.recipe.label} data={recipe.recipe} />
+          <RecipeCard key={recipe.recipe.label} data={recipe.recipe} />
         ))}
       </div>
     </>
