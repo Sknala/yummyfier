@@ -31,7 +31,7 @@ function RecipeFetch() {
     ? "Please wait, loading..."
     : error
       ? `Problem fetching the recipe data: ${error}`
-      : "Search for a recipe by ingredient";
+      : "Search e.g. chicken, rice, tomato...";
 
   const getRecipes = async () => {
     try {

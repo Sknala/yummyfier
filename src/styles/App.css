@@ -1,5 +1,6 @@
 /* https://www.w3schools.com/css/css3_variables.asp */
 :root {
+    --eggplantMedium: #BA9CAB;
     --eggplant: #614051;
     --eggplantLight: #e3ccd8;
     --salmon: #e5989b;
@@ -94,14 +95,14 @@ body {
 }
 
 .searchbar input::placeholder {
-    color: var(--eggplant);
-    text-align: center;
+    color: var(--eggplantMedium);
     font-weight: bold;
     opacity: 1;
 }
 
 .searchicon {
     cursor: pointer;
+    color: var(--eggplantMedium);
     padding-left: 30px;
     font-size: 40px;
 }
