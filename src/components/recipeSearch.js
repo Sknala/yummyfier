@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { InputAdornment, Input } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
-import Recipe from "../components/recipe.js";
+import Recipe from "./recipe.js";
 import "../styles/App.css";
 import "../styles/recipe.css";
 
