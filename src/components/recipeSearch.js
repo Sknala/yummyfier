@@ -9,7 +9,7 @@ import "../styles/recipe.css";
 const APP_ID = process.env.REACT_APP_API_ID;
 const APP_KEY = process.env.REACT_APP_API_KEY;
 
-function RecipeFetch() {
+function RecipeSearch() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [recipes, setRecipes] = useState([]);
@@ -31,8 +31,8 @@ function RecipeFetch() {
   const placeholderText = loading
     ? "Please wait, loading..."
     : error
-      ? `Problem fetching the recipe data: ${error}`
-      : "Search e.g. chicken, rice, tomato...";
+    ? `Problem fetching the recipe data: ${error}`
+    : "Search e.g. chicken, rice, tomato...";
 
   const getRecipes = async () => {
     try {
@@ -53,8 +53,9 @@ function RecipeFetch() {
 
   const searchRecipes = () => {
     getRecipes();
-/*     setSearch("");
- */  };
+    /*     setSearch("");
+     */
+  };
 
   return (
     <>
@@ -85,4 +86,4 @@ function RecipeFetch() {
     </>
   );
 }
-export default RecipeFetch;
+export default RecipeSearch;

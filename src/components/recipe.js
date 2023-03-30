@@ -1,6 +1,8 @@
 import React from "react";
 import "../styles/recipe.css";
 
+// not in use atm!!
+
 function Recipe(props) {
   const { label, image, ingredients, totalTime, calories, url } = props.data;
   return (
