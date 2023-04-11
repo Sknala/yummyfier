@@ -15,6 +15,8 @@ function RecipeSearch() {
   const [recipes, setRecipes] = useState([]);
   const [search, setSearch] = useState("");
 
+  const [keyword, setKeyword] = useState("");
+
   useEffect(() => {
     getRecipes();
   }, []);
@@ -31,8 +33,8 @@ function RecipeSearch() {
   const placeholderText = loading
     ? "Please wait, loading..."
     : error
-    ? `Problem fetching the recipe data: ${error}`
-    : "Search e.g. chicken, rice, tomato...";
+      ? `Problem fetching the recipe data: ${error}`
+      : "Search e.g. chicken, rice, tomato...";
 
   const getRecipes = async () => {
     try {
@@ -79,8 +81,8 @@ function RecipeSearch() {
         </form>
       </div>
       <div className="recipeList">
-        {recipes.map((recipe) => (
-          <RecipeCard key={recipe.recipe.label} data={recipe.recipe} />
+        {recipes.map((recipe, index) => (
+          <RecipeCard key={index} data={recipe.recipe} />
         ))}
       </div>
     </>

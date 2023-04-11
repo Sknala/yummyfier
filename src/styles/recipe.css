@@ -9,13 +9,15 @@
 
 /* View for desktops */
 @media (min-width: 1025px) {
+
   /* css for listing recipes
     
     /* from w3schools/css grid elements */
   .recipeList {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
     place-items: center;
+    grid-auto-rows: 1fr;
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
