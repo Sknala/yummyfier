@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { InputAdornment, Input } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
-import Recipe from "./recipe.js";
 import RecipeCard from "./recipeCard.js";
 import "../styles/App.css";
 import "../styles/recipe.css";
@@ -14,9 +13,6 @@ function RecipeSearch() {
   const [error, setError] = useState(null);
   const [recipes, setRecipes] = useState([]);
   const [search, setSearch] = useState("");
-
-  const [keyword, setKeyword] = useState("");
-
   useEffect(() => {
     getRecipes();
   }, []);
@@ -33,8 +29,8 @@ function RecipeSearch() {
   const placeholderText = loading
     ? "Please wait, loading..."
     : error
-      ? `Problem fetching the recipe data: ${error}`
-      : "Search e.g. chicken, rice, tomato...";
+    ? `Problem fetching the recipe data: ${error}`
+    : "Search e.g. chicken, rice, tomato...";
 
   const getRecipes = async () => {
     try {
@@ -55,8 +51,6 @@ function RecipeSearch() {
 
   const searchRecipes = () => {
     getRecipes();
-    /*     setSearch("");
-     */
   };
 
   return (
