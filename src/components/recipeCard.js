@@ -11,6 +11,8 @@ import {
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import RecipeDialog from "./recipeDialog";
 
+import "../styles/recipe.css";
+
 function RecipeCard(props) {
   const { label, image, ingredients, totalTime, calories, url, source } =
     props.data;
@@ -33,9 +35,10 @@ function RecipeCard(props) {
     }
   };
 
+  // See Card styles in recipe.css
   return (
     <>
-      <Card sx={{ width: 400, marginBottom: 2 }}>
+      <Card className="card" >
         <CardActionArea>
           <CardMedia
             component="img"
@@ -43,7 +46,7 @@ function RecipeCard(props) {
             image={image}
             alt="recipeImage"
           />
-          <CardContent sx={{ height: 260 }}>
+          <CardContent className="cardContent" >
             <Typography
               gutterBottom
               variant="p"
@@ -81,7 +84,7 @@ function RecipeCard(props) {
             <FavoriteIcon />
           </IconButton>
         </CardActions>
-      </Card>
+      </Card >
     </>
   );
 }
