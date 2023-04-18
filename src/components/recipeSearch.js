@@ -9,14 +9,16 @@ const APP_ID = process.env.REACT_APP_API_ID;
 const APP_KEY = process.env.REACT_APP_API_KEY;
 
 function RecipeSearch() {
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const [recipes, setRecipes] = useState([]);
   const [search, setSearch] = useState("");
 
-  useEffect(() => {
+  const [isRecipesEmpty, setIsRecipesEmpty] = useState(false)
+
+  /* useEffect(() => {
     getRecipes();
-  }, []);
+  }, []); */
 
   const handleSearchChange = (event) => {
     setSearch(event.target.value);
@@ -33,33 +35,38 @@ function RecipeSearch() {
       ? `Problem fetching the recipe data: ${error}`
       : " ";
 
-  const ifRecipesEmpty = () => {
-    if (Array.isArray(recipes) && recipes.length > 0) {
-      console.log("Search results: ");
-    } else {
-      console.log("Sorry, we didn't find what you're looking for. Please try something else.")
-    }
-  }
+  // If recipes list is empty
+  const recipesEmptyText = isRecipesEmpty
+    ? console.log("Sorry, we didn't find what you're looking for. Please try something else.")
+    : console.log("Search results: ")
 
   const getRecipes = async () => {
     try {
       const response = await fetch(
         `https://api.edamam.com/api/recipes/v2?type=public&q=${search}&app_id=${APP_ID}&app_key=${APP_KEY}`
       );
+      setLoading(true)
       if (!response.ok) {
         throw new Error(`HTTP error: status is ${response.status}`);
       }
       const data = await response.json();
       setRecipes(data.hits);
+
     } catch (err) {
       setError(err.message);
     } finally {
       setLoading(false);
+      if (Array.isArray(recipes) && recipes.length === 0) {
+        setIsRecipesEmpty(true)
+      } else {
+        setIsRecipesEmpty(false)
+      }
     }
   };
 
   const searchRecipes = () => {
     getRecipes();
+
   };
 
   return (
@@ -84,7 +91,9 @@ function RecipeSearch() {
           />
         </form>
       </div>
-      <p id="recipeFetchError">{placeholderText}</p>
+      <div style={{ color: 'var(--eggplant)', textAlign: 'center', fontSize: 20 }}>
+        {placeholderText}
+      </div>
       <div className="recipeList">
         {recipes.map((recipe, index) => (
           <RecipeCard key={index} data={recipe.recipe} />

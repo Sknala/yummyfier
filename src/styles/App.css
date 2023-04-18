@@ -49,11 +49,6 @@ body {
         float: right;
         margin-right: 60px;
     }
-
-    #recipeFetchError {
-        color: var(--eggplant);
-        text-align: center;
-    }
 }
 
 /* Laptops */
