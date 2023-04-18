@@ -4,6 +4,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import RecipeCard from "./recipeCard.js";
 import "../styles/App.css";
 import "../styles/recipe.css";
+import {Button} from "@mui/material";
 
 const APP_ID = process.env.REACT_APP_API_ID;
 const APP_KEY = process.env.REACT_APP_API_KEY;
@@ -13,6 +14,7 @@ function RecipeSearch() {
   const [error, setError] = useState(null);
   const [recipes, setRecipes] = useState([]);
   const [search, setSearch] = useState("");
+  const [sorted, setSorted] = useState(false);
 
   useEffect(() => {
     getRecipes();
@@ -32,6 +34,11 @@ function RecipeSearch() {
     : error
       ? `Problem fetching the recipe data: ${error}`
       : " ";
+
+
+      const handleSortClick = () => {
+        setSorted(!sorted);
+      };
 
   const getRecipes = async () => {
     try {
@@ -54,6 +61,20 @@ function RecipeSearch() {
     getRecipes();
   };
 
+  const sortedRecipes = sorted
+  ? [...recipes].sort((a, b) => {
+      const recipeA = a.recipe.label.toLowerCase();
+      const recipeB = b.recipe.label.toLowerCase();
+      if (recipeA < recipeB) {
+        return -1;
+      }
+      if (recipeA > recipeB) {
+        return 1;
+      }
+      return 0;
+    })
+  : recipes;
+
   return (
     <>
       <div className="searchdiv">
@@ -75,10 +96,18 @@ function RecipeSearch() {
             }
           />
         </form>
+  
       </div>
       <p id="recipeFetchError">{placeholderText}</p>
+      <div className="sortdiv">
+      <button className="sortbutton" onClick={handleSortClick}>{sorted ? "Unsort" : "Sort"}</button>
+      <button className="sortbutton" onClick={handleSortClick}>{sorted ? "Unsort" : "Sort"}</button>
+      <button className="sortbutton" onClick={handleSortClick}>{sorted ? "Unsort" : "Sort"}</button>
+      <button className="sortbutton" onClick={handleSortClick}>{sorted ? "Unsort" : "Sort"}</button>
+      <button className="sortbutton" onClick={handleSortClick}>{sorted ? "Unsort" : "Sort"}</button>'
+      </div>
       <div className="recipeList">
-        {recipes.map((recipe, index) => (
+        {sortedRecipes.map((recipe, index) => (
           <RecipeCard key={index} data={recipe.recipe} />
         ))}
       </div>
