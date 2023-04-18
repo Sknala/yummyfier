@@ -15,6 +15,7 @@ function RecipeSearch() {
   const [search, setSearch] = useState("");
 
   const [isRecipesEmpty, setIsRecipesEmpty] = useState(false)
+  const [noResults, setNoResults] = useState(false)
 
   /* useEffect(() => {
     getRecipes();
@@ -37,8 +38,8 @@ function RecipeSearch() {
 
   // If recipes list is empty
   const recipesEmptyText = isRecipesEmpty
-    ? console.log("Sorry, we didn't find what you're looking for. Please try something else.")
-    : console.log("Search results: ")
+    ? "No recipes"
+    : "Results"
 
   const getRecipes = async () => {
     try {
@@ -51,12 +52,11 @@ function RecipeSearch() {
       }
       const data = await response.json();
       setRecipes(data.hits);
-
     } catch (err) {
       setError(err.message);
     } finally {
       setLoading(false);
-      if (Array.isArray(recipes) && recipes.length === 0) {
+      if (recipes.keys.length === 0) {
         setIsRecipesEmpty(true)
       } else {
         setIsRecipesEmpty(false)
@@ -66,7 +66,6 @@ function RecipeSearch() {
 
   const searchRecipes = () => {
     getRecipes();
-
   };
 
   return (
@@ -94,6 +93,9 @@ function RecipeSearch() {
       <div style={{ color: 'var(--eggplant)', textAlign: 'center', fontSize: 20 }}>
         {placeholderText}
       </div>
+      <div style={{ color: 'red', textAlign: 'center', fontSize: 20 }}>
+        {recipesEmptyText}
+      </div>
       <div className="recipeList">
         {recipes.map((recipe, index) => (
           <RecipeCard key={index} data={recipe.recipe} />
@@ -103,3 +105,5 @@ function RecipeSearch() {
   );
 }
 export default RecipeSearch;
+
+
