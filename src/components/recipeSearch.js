@@ -33,6 +33,14 @@ function RecipeSearch() {
       ? `Problem fetching the recipe data: ${error}`
       : " ";
 
+  const ifRecipesEmpty = () => {
+    if (Array.isArray(recipes) && recipes.length > 0) {
+      console.log("Search results: ");
+    } else {
+      console.log("Sorry, we didn't find what you're looking for. Please try something else.")
+    }
+  }
+
   const getRecipes = async () => {
     try {
       const response = await fetch(
