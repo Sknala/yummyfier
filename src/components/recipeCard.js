@@ -13,16 +13,25 @@ import {
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import RecipeDialog from './recipeDialog';
 
+const API_KEY = process.env.REACT_APP_API_KEY_SPOONACULAR;
+
 function RecipeCard(props) {
     const [recipeDetails, setRecipeDetails] = useState(null);
 
-    const { id, title, image } = props.data;
+    const { id, title } = props.data;
 
     useEffect(() => {
         const fetchRecipeDetails = async () => {
             try {
                 const response = await fetch(
-                    `https://api.spoonacular.com/recipes/${id}/information?apiKey=${process.env.REACT_APP_API_KEY_SPOONACULAR}`
+                    `https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/${id}/information`,
+                    {
+                        headers: {
+                            'X-RapidAPI-Host':
+                                'spoonacular-recipe-food-nutrition-v1.p.rapidapi.com',
+                            'X-RapidAPI-Key': API_KEY,
+                        },
+                    }
                 );
                 if (!response.ok) {
                     throw new Error(`HTTP error: status is ${response.status}`);
@@ -52,7 +61,7 @@ function RecipeCard(props) {
                             <CardMedia
                                 component="img"
                                 height="140"
-                                image={image}
+                                image={recipeDetails.image}
                                 alt="recipeImage"
                             />
                             <CardContent sx={{ height: 260 }}>

@@ -34,7 +34,14 @@ function RecipeSearch() {
     const getRecipes = async () => {
         try {
             const response = await fetch(
-                `https://api.spoonacular.com/recipes/complexSearch?query=${search}&apiKey=${API_KEY}`
+                `https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/search?query=${search}`,
+                {
+                    headers: {
+                        'X-RapidAPI-Host':
+                            'spoonacular-recipe-food-nutrition-v1.p.rapidapi.com',
+                        'X-RapidAPI-Key': API_KEY,
+                    },
+                }
             );
             if (!response.ok) {
                 throw new Error(`HTTP error: status is ${response.status}`);
