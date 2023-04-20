@@ -1,10 +1,10 @@
-import React, { useEffect, useState, useContext } from "react";
+import React, { useState } from "react";
 import { InputAdornment, Input } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import Recipe from "./recipe.js";
 import "../styles/App.css";
 import "../styles/recipe.css";
-import AppContext from "../AppContext.js";
+import { useToggleSloganContext } from "../AppContext.js";
 
 const APP_ID = process.env.REACT_APP_API_ID;
 const APP_KEY = process.env.REACT_APP_API_KEY;
@@ -15,16 +15,13 @@ function RecipeFetch() {
   const [error, setError] = useState(null);
   const [recipes, setRecipes] = useState([]);
   const [search, setSearch] = useState("");
-  const appContext = useContext(AppContext);
-  const {showSlogan, setShowSlogan} = useState(appContext.showSlogan);
+  const [data, setData] = useToggleSloganContext({});
 
-  useEffect(() => {
-    getRecipes();
-        
-  }, []);
-
-  let hideSlogan = () => {
-    setShowSlogan(false);
+    const hideSlogan = () => {
+    setData({
+      ...data,
+      showSlogan: false
+    });
   }
 
   const handleSearchChange = (event) => {
@@ -35,7 +32,7 @@ function RecipeFetch() {
     event.preventDefault();
     hideSlogan();
     searchRecipes();
-    console.log("showSlogan: " + showSlogan)
+    console.log("showSlogan: " + data.showSlogan)
   };
 
   const placeholderText = loading

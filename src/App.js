@@ -2,22 +2,22 @@ import Footer from './components/Footer';
 import Header from './components/header';
 import RecipeFetch from './components/recipeSearch';
 import Slogan from './components/slogan';
-import AppContext from './AppContext';
-import { useContext, useState } from 'react';
+import { useToggleSloganContext } from './AppContext';
+import { ToggleSloganProvider } from './AppContext';
 
 function App() {
 
-  const appContext = useContext(AppContext);
-  const [showSlogan, setShowSlogan] = useState(appContext.showSlogan);
+  const [data, setData] = useToggleSloganContext();
 
   return (
     <div className="App">
-      <AppContext.Provider value={[showSlogan, setShowSlogan]}>
+      <ToggleSloganProvider>
         <Header />        
-        {appContext.showSlogan && <Slogan />}
+        {data.showSlogan && <Slogan />}
+        <Slogan />
         <RecipeFetch />
         <Footer />
-      </AppContext.Provider>
+        </ToggleSloganProvider>
     </div>
   );
 }
