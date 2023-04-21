@@ -7,17 +7,17 @@ import { ToggleSloganProvider } from './AppContext';
 
 function App() {
 
-  const [data, setData] = useToggleSloganContext();
+  const [data, setData] = useToggleSloganContext({});
 
   return (
     <div className="App">
-      <ToggleSloganProvider>
+      
         <Header />        
         {data.showSlogan && <Slogan />}
         <Slogan />
         <RecipeFetch />
         <Footer />
-        </ToggleSloganProvider>
+        
     </div>
   );
 }
