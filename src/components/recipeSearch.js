@@ -1,109 +1,115 @@
-import React, { useEffect, useState } from "react";
-import { InputAdornment, Input } from "@mui/material";
-import SearchIcon from "@mui/icons-material/Search";
-import RecipeCard from "./recipeCard.js";
-import "../styles/App.css";
-import "../styles/recipe.css";
+import React, { useEffect, useState } from 'react';
+import { InputAdornment, Input } from '@mui/material';
+import SearchIcon from '@mui/icons-material/Search';
+import RecipeCard from './recipeCard.js';
+import '../styles/App.css';
+import '../styles/recipe.css';
 
-const APP_ID = process.env.REACT_APP_API_ID;
-const APP_KEY = process.env.REACT_APP_API_KEY;
+const API_KEY = process.env.REACT_APP_API_KEY_SPOONACULAR;
 
 function RecipeSearch() {
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(null);
-  const [recipes, setRecipes] = useState([]);
-  const [search, setSearch] = useState("");
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
+    const [recipes, setRecipes] = useState([]);
+    const [search, setSearch] = useState('');
 
-  const [isRecipesEmpty, setIsRecipesEmpty] = useState(false)
-  const [noResults, setNoResults] = useState(false)
+    const [isRecipesEmpty, setIsRecipesEmpty] = useState(false);
+    const [noResults, setNoResults] = useState(false);
 
-  /* useEffect(() => {
+    /* useEffect(() => {
     getRecipes();
   }, []); */
 
-  const handleSearchChange = (event) => {
-    setSearch(event.target.value);
-  };
+    useEffect(() => {
+        getRecipes();
+    }, []);
 
-  const handleSearchSubmit = (event) => {
-    event.preventDefault();
-    searchRecipes();
-  };
+    const handleSearchChange = (event) => {
+        setSearch(event.target.value);
+    };
 
-  const placeholderText = loading
-    ? "Loading, please wait..."
-    : error
-      ? `Problem fetching the recipe data: ${error}`
-      : " ";
+    const handleSearchSubmit = (event) => {
+        event.preventDefault();
+        searchRecipes();
+    };
 
-  // If recipes list is empty
-  const recipesEmptyText = isRecipesEmpty
-    ? "No recipes"
-    : "Results"
+    const placeholderText = loading
+        ? 'Loading, please wait...'
+        : error
+        ? `Problem fetching the recipe data: ${error}`
+        : ' ';
 
-  const getRecipes = async () => {
-    try {
-      const response = await fetch(
-        `https://api.edamam.com/api/recipes/v2?type=public&q=${search}&app_id=${APP_ID}&app_key=${APP_KEY}`
-      );
-      setLoading(true)
-      if (!response.ok) {
-        throw new Error(`HTTP error: status is ${response.status}`);
-      }
-      const data = await response.json();
-      setRecipes(data.hits);
-    } catch (err) {
-      setError(err.message);
-    } finally {
-      setLoading(false);
-      if (recipes.keys.length === 0) {
-        setIsRecipesEmpty(true)
-      } else {
-        setIsRecipesEmpty(false)
-      }
-    }
-  };
+    // If recipes list is empty
+    const recipesEmptyText = isRecipesEmpty ? 'No recipes' : 'Results';
 
-  const searchRecipes = () => {
-    getRecipes();
-  };
-
-  return (
-    <>
-      <div className="searchdiv">
-        <form onSubmit={handleSearchSubmit}>
-          <Input
-            type="text"
-            disableUnderline
-            placeholder='Search e.g. chicken, rice, tomato...'
-            className="searchbar"
-            value={search}
-            onChange={handleSearchChange}
-            startAdornment={
-              <InputAdornment position="start">
-                <SearchIcon
-                  className="searchicon"
-                  style={{ fontSize: "40px" }}
-                />
-              </InputAdornment>
+    const getRecipes = async () => {
+        try {
+            const response = await fetch(
+                `https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/search?query=${search}`,
+                {
+                    headers: {
+                        'X-RapidAPI-Host':
+                            'spoonacular-recipe-food-nutrition-v1.p.rapidapi.com',
+                        'X-RapidAPI-Key': API_KEY,
+                    },
+                }
+            );
+            if (!response.ok) {
+                throw new Error(`HTTP error: status is ${response.status}`);
             }
-          />
-        </form>
-      </div>
-      <div style={{ color: 'var(--eggplant)', textAlign: 'center', fontSize: 20 }}>
-        {placeholderText}
-      </div>
-      <div style={{ color: 'red', textAlign: 'center', fontSize: 20 }}>
-        {recipesEmptyText}
-      </div>
-      <div className="recipeList">
-        {recipes.map((recipe, index) => (
-          <RecipeCard key={index} data={recipe.recipe} />
-        ))}
-      </div>
-    </>
-  );
+            const data = await response.json();
+            setRecipes(data.results);
+        } catch (err) {
+            setError(err.message);
+        } finally {
+            setLoading(false);
+        }
+    };
+
+    const searchRecipes = () => {
+        getRecipes();
+    };
+
+    return (
+        <>
+            <div className="searchdiv">
+                <form onSubmit={handleSearchSubmit}>
+                    <Input
+                        type="text"
+                        disableUnderline
+                        placeholder="Search e.g. chicken, rice, tomato..."
+                        className="searchbar"
+                        value={search}
+                        onChange={handleSearchChange}
+                        startAdornment={
+                            <InputAdornment position="start">
+                                <SearchIcon
+                                    className="searchicon"
+                                    style={{ fontSize: '40px' }}
+                                />
+                            </InputAdornment>
+                        }
+                    />
+                </form>
+            </div>
+            <div
+                style={{
+                    color: 'var(--eggplant)',
+                    textAlign: 'center',
+                    fontSize: 20,
+                }}
+            >
+                {placeholderText}
+            </div>
+            <div style={{ color: 'red', textAlign: 'center', fontSize: 20 }}>
+                {recipesEmptyText}
+            </div>
+            <div className="recipeList">
+                {recipes.map((recipe) => (
+                    <RecipeCard key={recipe.id} data={recipe} />
+                ))}
+            </div>
+        </>
+    );
 }
 export default RecipeSearch;
-
-
