@@ -3,18 +3,16 @@ import Header from './components/header';
 import RecipeFetch from './components/recipeSearch';
 import Slogan from './components/slogan';
 import { useToggleSloganContext } from './AppContext';
-import { ToggleSloganProvider } from './AppContext';
 
 function App() {
 
-  const [data, setData] = useToggleSloganContext({});
+  const {data, setData} = useToggleSloganContext();
 
   return (
     <div className="App">
       
         <Header />        
         {data.showSlogan && <Slogan />}
-        <Slogan />
         <RecipeFetch />
         <Footer />
         

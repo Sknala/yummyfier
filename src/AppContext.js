@@ -7,7 +7,7 @@ export const ToggleSloganContext = createContext();
 export const ToggleSloganProvider = ({ children }) => {
     // the value passed in here will be accessible anywhere in our application 
     // you can pass any value, in our case we pass our state and it's update method 
-    const [data, setData] = useState({
+    const[data, setData] = useState({
         showSlogan: true,
     });
     

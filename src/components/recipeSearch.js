@@ -15,7 +15,7 @@ function RecipeFetch() {
   const [error, setError] = useState(null);
   const [recipes, setRecipes] = useState([]);
   const [search, setSearch] = useState("");
-  const [data, setData] = useToggleSloganContext({});
+  const {data, setData} = useToggleSloganContext();
 
     const hideSlogan = () => {
     setData({
