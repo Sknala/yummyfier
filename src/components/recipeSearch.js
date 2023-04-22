@@ -20,10 +20,6 @@ function RecipeSearch() {
     getRecipes();
   }, []); */
 
-    useEffect(() => {
-        getRecipes();
-    }, []);
-
     const handleSearchChange = (event) => {
         setSearch(event.target.value);
     };
@@ -45,7 +41,7 @@ function RecipeSearch() {
     const getRecipes = async () => {
         try {
             const response = await fetch(
-                `https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/search?query=${search}`,
+                `https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/complexSearch?query=${search}&number=10&offset=0`,
                 {
                     headers: {
                         'X-RapidAPI-Host':
@@ -58,7 +54,12 @@ function RecipeSearch() {
                 throw new Error(`HTTP error: status is ${response.status}`);
             }
             const data = await response.json();
-            setRecipes(data.results);
+            if (data.results.length === 0) {
+                setIsRecipesEmpty(true);
+            } else {
+                setIsRecipesEmpty(false);
+                setRecipes(data.results);
+            }
         } catch (err) {
             setError(err.message);
         } finally {

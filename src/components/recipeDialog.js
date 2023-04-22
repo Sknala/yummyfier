@@ -20,7 +20,13 @@ function RecipeDialog(props) {
 
     const { title, extendedIngredients, readyInMinutes, servings, sourceUrl } =
         props.data;
-    const instructions = props.data.analyzedInstructions[0].steps;
+
+    const instructions =
+        props.data.analyzedInstructions &&
+        props.data.analyzedInstructions.length > 0 &&
+        props.data.analyzedInstructions[0].steps
+            ? props.data.analyzedInstructions[0].steps
+            : [];
 
     return (
         <div>
