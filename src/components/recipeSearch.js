@@ -8,7 +8,7 @@ import '../styles/recipe.css';
 const API_KEY = process.env.REACT_APP_API_KEY_SPOONACULAR;
 
 function RecipeSearch() {
-    const [loading, setLoading] = useState(true);
+    const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
     const [recipes, setRecipes] = useState([]);
     const [search, setSearch] = useState('');
@@ -39,6 +39,7 @@ function RecipeSearch() {
     const recipesEmptyText = isRecipesEmpty ? 'No recipes' : 'Results';
 
     const getRecipes = async () => {
+        setLoading(true);
         try {
             const response = await fetch(
                 `https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/complexSearch?query=${search}&number=10&offset=0`,
