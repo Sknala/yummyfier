@@ -4,6 +4,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import RecipeCard from './recipeCard.js';
 import '../styles/App.css';
 import '../styles/recipe.css';
+import { useToggleSloganContext } from '../AppContext.js';
 
 const API_KEY = process.env.REACT_APP_API_KEY_SPOONACULAR;
 
@@ -15,10 +16,18 @@ function RecipeSearch() {
 
     const [isRecipesEmpty, setIsRecipesEmpty] = useState(false);
     const [noResults, setNoResults] = useState(false);
+    const {data, setData} = useToggleSloganContext();
 
     /* useEffect(() => {
     getRecipes();
   }, []); */
+
+    const hideSlogan = () => {
+        setData({
+            ...data,
+            showSlogan: false
+        });
+    }
 
     const handleSearchChange = (event) => {
         setSearch(event.target.value);
@@ -26,6 +35,7 @@ function RecipeSearch() {
 
     const handleSearchSubmit = (event) => {
         event.preventDefault();
+        hideSlogan();
         searchRecipes();
     };
 
