@@ -62,7 +62,7 @@ export default function LogIn() {
           Log In
         </Button>
       ) : (
-        <Button id="logOut" variant="text" onClick={handleLogOut}>
+        <Button id="logIn" variant="text" onClick={handleLogOut}>
           Log Out {user.email}
         </Button>
       )}
