@@ -13,8 +13,6 @@ function RecipeSearch() {
   const [error, setError] = useState(null);
   const [recipes, setRecipes] = useState([]);
   const [search, setSearch] = useState("");
-
-  const [isRecipesEmpty, setIsRecipesEmpty] = useState(false);
   const [noResults, setNoResults] = useState(false);
   const { data, setData } = useToggleSloganContext();
 
@@ -38,7 +36,7 @@ function RecipeSearch() {
   const placeholderText = loading
     ? "Loading, please wait..."
     : error
-    ? `Problem fetching the recipe data: ${error}`
+    ? `There was a problem getting the recipes. Please try again.`
     : " ";
 
   const getRecipes = async () => {
@@ -59,9 +57,9 @@ function RecipeSearch() {
       }
       const data = await response.json();
       if (data.results.length === 0) {
-        setIsRecipesEmpty(true);
+        setNoResults(true);
       } else {
-        setIsRecipesEmpty(false);
+        setNoResults(false);
         setRecipes(data.results);
       }
     } catch (err) {
@@ -107,10 +105,17 @@ function RecipeSearch() {
         {placeholderText}
       </div>
       <div className="recipeList">
-        {!isRecipesEmpty ? (
+        {!noResults ? (
           recipes.map((recipe) => <RecipeCard key={recipe.id} data={recipe} />)
         ) : (
-          <div>No results</div>
+          <div
+            style={{
+              color: "var(--eggplant)",
+              fontSize: 20,
+            }}
+          >
+            Sorry, no recipes found. Please try another ingredient.
+          </div>
         )}
       </div>
     </>
