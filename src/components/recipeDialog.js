@@ -6,6 +6,7 @@ import DialogContent from "@mui/material/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
 import { Link } from "@mui/material";
+import FormatPrepTime from "./formatPrepTime";
 
 function RecipeDialog(props) {
   const [open, setOpen] = useState(false);
@@ -34,11 +35,18 @@ function RecipeDialog(props) {
         Click to see more
       </Button>
       <Dialog open={open} onClose={handleClose}>
-        <DialogTitle>{title}</DialogTitle>
+        <DialogTitle style={{ fontWeight: "bold" }}>{title}</DialogTitle>
         <DialogContent>
           <DialogContentText component="div">
-            <p>Preparation time: {readyInMinutes} minutes</p>
-            <p>Servings: {servings}</p>
+            <p>
+              <span style={{ fontWeight: "bold" }}>Preparation time: </span>
+              {/* Formatting over 60 minutes preparation time to hours and minutes */}
+              {FormatPrepTime({ readyInMinutes })}
+            </p>
+            <p>
+              <span style={{ fontWeight: "bold" }}>Servings: </span>
+              {servings}
+            </p>
             <h4>Ingredients:</h4>
             <ul style={{ padding: 10 }}>
               {extendedIngredients.map((ingredient, index) => (
