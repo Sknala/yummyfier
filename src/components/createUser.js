@@ -26,6 +26,19 @@ export default function CreateUser() {
 
   const handleClose = () => {
     setOpen(false);
+    setErrorMsg("");
+  };
+
+  // firebase auth error handler
+  const authCodeToMessage = (authCode) => {
+    switch (authCode) {
+      case "auth/invalid-email":
+        return "Please check you email";
+      case "auth/weak-password":
+        return "Password must be at least six characters";
+      default:
+        return "";
+    }
   };
 
   const handleRegister = async () => {
@@ -33,11 +46,19 @@ export default function CreateUser() {
       if (password !== confirmPassword) {
         return setErrorMsg("Passwords do not match");
       }
-      const user = await createUserWithEmailAndPassword(auth, email, password);
-      console.log(user);
-      setOpen(false);
+      const userCredential = await createUserWithEmailAndPassword(
+        auth,
+        email,
+        password
+      );
+      if (userCredential.user) {
+        // alert that user created successfully
+        setOpen(false);
+      }
     } catch (error) {
-      console.log(error.message);
+      // setErrorMsg("Creating a new user failed");
+      setErrorMsg(authCodeToMessage(error.code));
+      console.log(error.code);
     }
   };
 
@@ -88,7 +109,12 @@ export default function CreateUser() {
           <Button onClick={handleClose} color="error">
             Cancel
           </Button>
-          <Button onClick={handleRegister}>Create new User</Button>
+          <Button
+            disabled={!email || !password || !confirmPassword}
+            onClick={handleRegister}
+          >
+            Create new User
+          </Button>
         </DialogActions>
       </Dialog>
     </div>
