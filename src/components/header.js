@@ -1,5 +1,5 @@
 // Test components folder and file
-import React, { useState } from "react";
+import React from "react";
 import "../styles/header.css";
 import "../styles/App.css";
 import LogIn from "./logIn";
