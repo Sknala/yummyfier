@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { InputAdornment, Input } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import RecipeCard from "./recipeCard.js";
