@@ -10,7 +10,7 @@ export default function Header() {
     <div className="container">
       <LogIn />
       <CreateUser />
-      <div className="header">Yummyfier.</div>
+      <div className="header" data-testid="header">Yummyfier.</div>
     </div>
   );
 }

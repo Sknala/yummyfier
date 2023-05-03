@@ -52,11 +52,9 @@ export default function CreateUser() {
         password
       );
       if (userCredential.user) {
-        // alert that user created successfully
         setOpen(false);
       }
     } catch (error) {
-      // setErrorMsg("Creating a new user failed");
       setErrorMsg(authCodeToMessage(error.code));
       console.log(error.code);
     }

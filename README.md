@@ -5,9 +5,7 @@
 Business Information Technology degree programme at Haaga-Helia University of Applied Sciences
 
 ## Table of contents
-1. [Getting Started with Create React App](#getting-started-with-create-react-app)
-    - [Available Scripts](#available-scripts)
-    - [Learn More](#learn-more)
+1. [Installation](#installation)
 3. [Project Plan](#project-plan)
 4. [Development Tools](#development-tools)
 5. [Yummyfier](#yummyfier)
@@ -15,76 +13,34 @@ Business Information Technology degree programme at Haaga-Helia University of Ap
 7. [Target Audience](#target-audience)
 8. [First mockups](#first-mockups)
 
-# Getting Started with Create React App
+## Installation
+1. Clone the repository
+```bash
+git clone git@github.com:Sknala/yummyfier.git
+```
+2. Install dependencies
+```bash
+npm install
+```
+3. Create a .env file in your project root and add X-Rapid and Firebase keys accordingly.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). YumYumYum.
+<sub>**Note! You need to use the x-rapid version of the key!**</sub>
+```bash
+#Spoonacular
+REACT_APP_API_KEY_SPOONACULAR=
 
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+#Firebase
+REACT_APP_apiKey=
+REACT_APP_authDomain=
+REACT_APP_projectId=
+REACT_APP_storageBucket=
+REACT_APP_messagingSenderId=
+REACT_APP_appId=
+```
+4. Run the application
+```bash
+npm start
+```
 
 ## Project Plan
 
@@ -95,10 +51,10 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 - Web application created with React App
 - Mockup created with [Figma](https://www.figma.com/)
-- As database using [Firebase Realtime Database](https://firebase.google.com/)
-- We are using [Edamam API](https://www.edamam.com/) to fetch recipes and ingredients
+- As database using (currently only for Authentication) [Firebase Auth, Firestore](https://firebase.google.com/)
+- We are using [Spoonacular](https://www.spoonacular.com/) to fetch recipes and ingredients
 
-<sub>**Further development aims to expand the app to be mobile responsive**</sub>
+<sub>**Further development aims to expand the app to be mobile responsive, and for the user to be able to favourite recipes**</sub>
 
 ## Yummyfier
 
@@ -128,6 +84,7 @@ Idea in short:
 - By allowing users to save recipes they enjoy, the app encourages repeat use
 - Overall, Yummyfier is designed to meet the needs of a broad range of users who are interested in cooking, with a focus on simplicity, convenience, and accessibility.
 
-## First mockups
+## App layout
 
-<img src="https://user-images.githubusercontent.com/105623785/224726407-1e2e4840-d3fc-41f1-be10-d6575a42f233.png" width="450" height="300" />
+<img src="/assets/imgs/frontpage.png"  width="500" height="300"> <img src="/assets/imgs/recipes.png"  width="500" height="300">
+<img src="/assets/imgs/recipeDialog.png"  width="500" height="300"> <img src="/assets/imgs/createUser.png"  width="500" height="300"> <img src="/assets/imgs/LogIn.png"  width="500" height="300">
