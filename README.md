@@ -5,9 +5,7 @@
 Business Information Technology degree programme at Haaga-Helia University of Applied Sciences
 
 ## Table of contents
-1. [Getting Started with Create React App](#getting-started-with-create-react-app)
-    - [Available Scripts](#available-scripts)
-    - [Learn More](#learn-more)
+1. [Installation](#installation)
 3. [Project Plan](#project-plan)
 4. [Development Tools](#development-tools)
 5. [Yummyfier](#yummyfier)
@@ -24,7 +22,20 @@ git clone git@github.com:Sknala/yummyfier.git
 ```bash
 npm install
 ```
-3. Run the application
+3. Create a .env file in your project root and add X-Rapid and Firebase keys accordingly.
+```bash
+#Spoonacular
+REACT_APP_API_KEY_SPOONACULAR=
+
+#Firebase
+REACT_APP_apiKey=
+REACT_APP_authDomain=
+REACT_APP_projectId=
+REACT_APP_storageBucket=
+REACT_APP_messagingSenderId=
+REACT_APP_appId=
+```
+4. Run the application
 ```bash
 npm start
 ```
