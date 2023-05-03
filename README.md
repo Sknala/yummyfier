@@ -17,7 +17,7 @@ Business Information Technology degree programme at Haaga-Helia University of Ap
 
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). YumYumYum.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
@@ -95,10 +95,10 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 - Web application created with React App
 - Mockup created with [Figma](https://www.figma.com/)
-- As database using [Firebase Realtime Database](https://firebase.google.com/)
-- We are using [Edamam API](https://www.edamam.com/) to fetch recipes and ingredients
+- As database using (currently only for Authentication) [Firebase Auth, Firestore](https://firebase.google.com/)
+- We are using [Spoonacular](https://www.spoonacular.com/) to fetch recipes and ingredients
 
-<sub>**Further development aims to expand the app to be mobile responsive**</sub>
+<sub>**Further development aims to expand the app to be mobile responsive, and for the user to be able to favourite recipes**</sub>
 
 ## Yummyfier
 
