@@ -56,6 +56,7 @@ function RecipeCard(props) {
   // See Card styles in recipe.css
   return (
     <>
+    <div>
       <Card className="card">
         <CardActionArea>
           <CardMedia
@@ -105,6 +106,7 @@ function RecipeCard(props) {
           </IconButton>
         </CardActions>
       </Card>
+      </div>
     </>
   );
 }
