@@ -84,7 +84,7 @@ Idea in short:
 - By allowing users to save recipes they enjoy, the app encourages repeat use
 - Overall, Yummyfier is designed to meet the needs of a broad range of users who are interested in cooking, with a focus on simplicity, convenience, and accessibility.
 
-## First mockups
+## App layout
 
 <img src="/assets/imgs/frontpage.png"  width="500" height="300"> <img src="/assets/imgs/recipes.png"  width="500" height="300">
 <img src="/assets/imgs/recipeDialog.png"  width="500" height="300"> <img src="/assets/imgs/createUser.png"  width="500" height="300"> <img src="/assets/imgs/LogIn.png"  width="500" height="300">
