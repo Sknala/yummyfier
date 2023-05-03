@@ -42,6 +42,20 @@ REACT_APP_appId=
 npm start
 ```
 
+## Project Plan
+
+- Assignment for Ohjelmistoprojekti II (Software Project II)
+- Purpose of our project is to design a web application using open data
+
+## Development Tools
+
+- Web application created with React App
+- Mockup created with [Figma](https://www.figma.com/)
+- As database using (currently only for Authentication) [Firebase Auth, Firestore](https://firebase.google.com/)
+- We are using [Spoonacular](https://www.spoonacular.com/) to fetch recipes and ingredients
+
+<sub>**Further development aims to expand the app to be mobile responsive, and for the user to be able to favourite recipes**</sub>
+
 ## Yummyfier
 
 - Food recipe web application for users interested in cooking
