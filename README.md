@@ -86,4 +86,5 @@ Idea in short:
 
 ## First mockups
 
-<img src="https://user-images.githubusercontent.com/105623785/224726407-1e2e4840-d3fc-41f1-be10-d6575a42f233.png" width="450" height="300" />
+<img src="/assets/imgs/frontpage.png"  width="500" height="300"> <img src="/assets/imgs/recipes.png"  width="500" height="300">
+<img src="/assets/imgs/recipeDialog.png"  width="500" height="300"> <img src="/assets/imgs/createUser.png"  width="500" height="300"> <img src="/assets/imgs/LogIn.png"  width="500" height="300">
