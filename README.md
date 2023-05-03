@@ -23,6 +23,7 @@ git clone git@github.com:Sknala/yummyfier.git
 npm install
 ```
 3. Create a .env file in your project root and add X-Rapid and Firebase keys accordingly.
+<sub>**Note! You need to use the x-rapid version of the key!**</sub>
 ```bash
 #Spoonacular
 REACT_APP_API_KEY_SPOONACULAR=
