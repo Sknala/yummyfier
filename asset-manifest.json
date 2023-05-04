@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/yummyfier/static/css/main.d9da3a1e.css",
+    "main.js": "/yummyfier/static/js/main.fcc563ad.js",
+    "static/js/787.368dffd4.chunk.js": "/yummyfier/static/js/787.368dffd4.chunk.js",
+    "index.html": "/yummyfier/index.html",
+    "main.d9da3a1e.css.map": "/yummyfier/static/css/main.d9da3a1e.css.map",
+    "main.fcc563ad.js.map": "/yummyfier/static/js/main.fcc563ad.js.map",
+    "787.368dffd4.chunk.js.map": "/yummyfier/static/js/787.368dffd4.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d9da3a1e.css",
+    "static/js/main.fcc563ad.js"
+  ]
+}
