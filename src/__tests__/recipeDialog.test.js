@@ -2,6 +2,7 @@ import React from 'react';
 import { fireEvent, render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import RecipeDialog from '../components/recipeDialog';
+import { ToggleSloganProvider } from '../AppContext';
 
 const sampleRecipe = {
     title: 'Sample Recipe',
@@ -24,7 +25,11 @@ const sampleRecipe = {
 
 describe('RecipeDialog component', () => {
     test('renders RecipeDialog and opens dialog with sample data', () => {
-        render(<RecipeDialog data={sampleRecipe} />);
+        render(
+            <ToggleSloganProvider>
+                <RecipeDialog data={sampleRecipe} />
+            </ToggleSloganProvider>
+        );
 
         fireEvent.click(screen.getByText('Click to see more'));
 

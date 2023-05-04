@@ -2,6 +2,7 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import RecipeCard from '../components/recipeCard';
+import { ToggleSloganProvider } from '../AppContext';
 
 const sampleRecipe = {
     id: 1,
@@ -27,7 +28,11 @@ describe('RecipeCard component', () => {
             });
         });
 
-        render(<RecipeCard data={sampleRecipe} />);
+        render(
+            <ToggleSloganProvider>
+                <RecipeCard data={sampleRecipe} />
+            </ToggleSloganProvider>
+        );
 
         expect(await screen.findByText('Sample Recipe')).toBeInTheDocument();
         expect(screen.getByText('Servings: 4')).toBeInTheDocument();
